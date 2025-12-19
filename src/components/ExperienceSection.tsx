@@ -1,10 +1,11 @@
-import { Briefcase } from "lucide-react";
+import { Briefcase, ExternalLink } from "lucide-react";
 
 const experiences = [
   {
     title: "Data Engineer",
     company: "Altysys Technology Pvt. Ltd",
     period: "Nov 2024 – Feb 2025",
+    certificateLink: "https://github.com/Anupam-Sing-h/Certificates/blob/main/Altysys%20Certificate.pdf",
     points: [
       "Built ETL pipelines using Python, SQL, and Databricks for data ingestion and transformation",
       "Worked with Azure Data Lake and Blob Storage, selecting storage based on access patterns",
@@ -18,6 +19,7 @@ const experiences = [
     title: "AI & ML Intern",
     company: "GI Ventures",
     period: "Dec 2023 – May 2024",
+    certificateLink: "https://www.linkedin.com/posts/anupam-singh-04619024b_ai-machinelearning-artificiallntelligence-activity-7240035205510488065-UXjV?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD3I1TYBQriP5MvJu2jfdAqrUDPlRed_ds4",
     points: [
       "Accelerated computer vision projects with Nvidia DGX-100",
       "Enhanced image annotation and model training using Docker and Roboflow",
@@ -25,6 +27,18 @@ const experiences = [
       "Integrated with Google Gmail API for automated alerts",
     ],
     tags: ["YOLOv7", "PyTorch", "Docker", "Roboflow", "NVIDIA DGX"],
+  },
+  {
+    title: "Summer Internship in MERN Stack",
+    company: "ABESIT",
+    period: "July 2024 – Aug 2024",
+    certificateLink: "https://github.com/Anupam-Sing-h/Certificates/blob/main/MERN%20certificate.pdf",
+    points: [
+      "Developed full-stack web applications using MongoDB, Express, React, and Node.js",
+      "Implemented RESTful APIs and integrated frontend with backend services",
+      "Learned best practices for modern web development workflows",
+    ],
+    tags: ["MongoDB", "Express", "React", "Node.js", "REST API"],
   },
 ];
 
@@ -64,6 +78,16 @@ const ExperienceSection = () => {
                         <h3 className="text-xl font-semibold text-foreground flex items-center gap-2">
                           <Briefcase size={20} className="text-primary" />
                           {exp.title}
+                          {exp.certificateLink && (
+                            <a
+                              href={exp.certificateLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-muted-foreground hover:text-primary transition-colors"
+                            >
+                              <ExternalLink size={16} />
+                            </a>
+                          )}
                         </h3>
                         <p className="text-primary font-mono text-sm mt-1">
                           {exp.company}

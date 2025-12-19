@@ -1,25 +1,39 @@
-import { Award } from "lucide-react";
+import { Award, ExternalLink } from "lucide-react";
 
 const certifications = [
   {
     title: "TCS iON Career Edge – Young Professional",
     issuer: "TCS",
+    link: "https://github.com/Anupam-Sing-h/Certificates/blob/main/TCS_iON.pdf",
   },
   {
     title: "Databricks Accredited - Databricks Fundamentals",
     issuer: "Databricks",
+    link: "https://www.linkedin.com/posts/anupam-singh-04619024b_academy-accreditation-databricks-fundamentals-activity-7274989034706247680-AhRP?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD3I1TYBQriP5MvJu2jfdAqrUDPlRed_ds4",
   },
   {
     title: "Core Java & OOPs Training Program",
     issuer: "ABESIT",
+    link: "https://github.com/Anupam-Sing-h/Certificates/blob/main/MERN%20certificate.pdf",
   },
   {
     title: "API Fundamentals Student Expert",
     issuer: "Postman",
+    link: "https://www.linkedin.com/posts/anupam-singh-04619024b_postman-api-fundamentals-student-expert-activity-7244415092077821953-NX2P?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD3I1TYBQriP5MvJu2jfdAqrUDPlRed_ds4",
   },
   {
     title: "C++ Programming Language",
     issuer: "Udemy",
+  },
+  {
+    title: "Generative AI",
+    issuer: "Certification",
+    link: "https://github.com/Anupam-Sing-h/Certificates/blob/main/Gen-AI.pdf",
+  },
+  {
+    title: "Rest API",
+    issuer: "Certification",
+    link: "https://github.com/Anupam-Sing-h/Certificates/blob/main/Rest%20API.pdf",
   },
 ];
 
@@ -46,7 +60,7 @@ const CertificationsSection = () => {
                 <div className="p-2 bg-primary/10 rounded-lg flex-shrink-0">
                   <Award className="text-primary" size={20} />
                 </div>
-                <div>
+                <div className="flex-1">
                   <h3 className="font-medium text-foreground text-sm">
                     {cert.title}
                   </h3>
@@ -54,6 +68,16 @@ const CertificationsSection = () => {
                     {cert.issuer}
                   </p>
                 </div>
+                {cert.link && (
+                  <a
+                    href={cert.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors flex-shrink-0"
+                  >
+                    <ExternalLink size={16} />
+                  </a>
+                )}
               </div>
             ))}
           </div>
