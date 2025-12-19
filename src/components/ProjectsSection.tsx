@@ -12,6 +12,8 @@ const projects = [
       "Secure Stripe payments",
       "Automated dependency patching",
     ],
+    github: "https://github.com/Anupam-Sing-h/GoCart",
+    live: "https://go-cart-ecru-five.vercel.app",
   },
   {
     title: "QuickBlog using AI",
@@ -23,6 +25,8 @@ const projects = [
       "Role-based access control",
       "Background job scheduling",
     ],
+    github: "https://github.com/Anupam-Sing-h/QuickBlog",
+    live: "https://quick-blog-seven-beta.vercel.app",
   },
   {
     title: "PPE Violation Detection System",
@@ -63,12 +67,26 @@ const ProjectsSection = () => {
                     <Folder className="text-primary" size={24} />
                   </div>
                   <div className="flex gap-3">
-                    <button className="text-muted-foreground hover:text-primary transition-colors">
-                      <Github size={20} />
-                    </button>
-                    <button className="text-muted-foreground hover:text-primary transition-colors">
-                      <ExternalLink size={20} />
-                    </button>
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        <Github size={20} />
+                      </a>
+                    )}
+                    {project.live && (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        <ExternalLink size={20} />
+                      </a>
+                    )}
                   </div>
                 </div>
 

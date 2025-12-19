@@ -75,7 +75,7 @@ const ContactSection = () => {
                     <Github size={20} />
                   </a>
                   <a
-                    href="https://linkedin.com/in/anupam-singh"
+                    href="https://www.linkedin.com/in/anupam-singh-04619024b"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-card border border-border rounded-lg hover:border-primary/50 hover:text-primary transition-all"
