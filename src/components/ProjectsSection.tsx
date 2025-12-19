@@ -1,7 +1,7 @@
-import { ExternalLink, Github, Folder } from "lucide-react";
+import { ExternalLink, Github, Folder, Code, Brain } from "lucide-react";
 import { Button } from "./ui/button";
 
-const projects = [
+const webProjects = [
   {
     title: "E-commerce Multi-vendor Platform",
     description:
@@ -28,6 +28,9 @@ const projects = [
     github: "https://github.com/Anupam-Sing-h/QuickBlog",
     live: "https://quick-blog-seven-beta.vercel.app",
   },
+];
+
+const aiMlProjects = [
   {
     title: "PPE Violation Detection System",
     description:
@@ -40,6 +43,84 @@ const projects = [
     ],
   },
 ];
+
+interface Project {
+  title: string;
+  description: string;
+  tags: string[];
+  features: string[];
+  github?: string;
+  live?: string;
+}
+
+const ProjectCard = ({ project }: { project: Project }) => (
+  <div className="group bg-card border border-border rounded-xl p-6 hover:border-primary/50 transition-all duration-300 hover:glow-soft flex flex-col">
+    {/* Header */}
+    <div className="flex items-center justify-between mb-4">
+      <div className="p-3 bg-primary/10 rounded-lg">
+        <Folder className="text-primary" size={24} />
+      </div>
+      <div className="flex gap-3">
+        {project.github && (
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-primary transition-colors"
+          >
+            <Github size={20} />
+          </a>
+        )}
+        {project.live && (
+          <a
+            href={project.live}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-primary transition-colors"
+          >
+            <ExternalLink size={20} />
+          </a>
+        )}
+      </div>
+    </div>
+
+    {/* Content */}
+    <h3 className="text-lg font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+      {project.title}
+    </h3>
+    <p className="text-muted-foreground text-sm mb-4 flex-1">
+      {project.description}
+    </p>
+
+    {/* Features */}
+    <ul className="space-y-1 mb-4">
+      {project.features.map((feature, featureIndex) => (
+        <li
+          key={featureIndex}
+          className="text-xs text-muted-foreground flex items-center gap-2"
+        >
+          <span className="w-1 h-1 bg-primary rounded-full" />
+          {feature}
+        </li>
+      ))}
+    </ul>
+
+    {/* Tags */}
+    <div className="flex flex-wrap gap-2 mt-auto">
+      {project.tags.map((tag, tagIndex) => (
+        <span
+          key={tagIndex}
+          className="text-xs font-mono text-muted-foreground"
+        >
+          {tag}
+          {tagIndex < project.tags.length - 1 && (
+            <span className="ml-2 text-border">•</span>
+          )}
+        </span>
+      ))}
+    </div>
+  </div>
+);
 
 const ProjectsSection = () => {
   return (
@@ -54,79 +135,38 @@ const ProjectsSection = () => {
             </h2>
           </div>
 
-          {/* Projects Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project, index) => (
-              <div
-                key={index}
-                className="group bg-card border border-border rounded-xl p-6 hover:border-primary/50 transition-all duration-300 hover:glow-soft flex flex-col"
-              >
-                {/* Header */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="p-3 bg-primary/10 rounded-lg">
-                    <Folder className="text-primary" size={24} />
-                  </div>
-                  <div className="flex gap-3">
-                    {project.github && (
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        <Github size={20} />
-                      </a>
-                    )}
-                    {project.live && (
-                      <a
-                        href={project.live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        <ExternalLink size={20} />
-                      </a>
-                    )}
-                  </div>
-                </div>
-
-                {/* Content */}
-                <h3 className="text-lg font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-muted-foreground text-sm mb-4 flex-1">
-                  {project.description}
-                </p>
-
-                {/* Features */}
-                <ul className="space-y-1 mb-4">
-                  {project.features.map((feature, featureIndex) => (
-                    <li
-                      key={featureIndex}
-                      className="text-xs text-muted-foreground flex items-center gap-2"
-                    >
-                      <span className="w-1 h-1 bg-primary rounded-full" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  {project.tags.map((tag, tagIndex) => (
-                    <span
-                      key={tagIndex}
-                      className="text-xs font-mono text-muted-foreground"
-                    >
-                      {tag}
-                      {tagIndex < project.tags.length - 1 && (
-                        <span className="ml-2 text-border">•</span>
-                      )}
-                    </span>
-                  ))}
-                </div>
+          {/* Web Development Projects */}
+          <div className="mb-16">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="p-2 bg-primary/10 rounded-lg">
+                <Code className="text-primary" size={20} />
               </div>
-            ))}
+              <h3 className="text-xl font-semibold text-foreground">
+                Web Development
+              </h3>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              {webProjects.map((project, index) => (
+                <ProjectCard key={index} project={project} />
+              ))}
+            </div>
+          </div>
+
+          {/* AI & ML Projects */}
+          <div className="mb-12">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="p-2 bg-primary/10 rounded-lg">
+                <Brain className="text-primary" size={20} />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground">
+                AI & Machine Learning
+              </h3>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {aiMlProjects.map((project, index) => (
+                <ProjectCard key={index} project={project} />
+              ))}
+            </div>
           </div>
 
           {/* View More */}
