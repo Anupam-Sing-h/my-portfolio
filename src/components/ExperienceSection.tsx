@@ -16,6 +16,18 @@ const experiences = [
     tags: ["Python", "SQL", "Databricks", "Azure", "CI/CD"],
   },
   {
+    title: "Summer Internship in MERN Stack",
+    company: "ABESIT",
+    period: "July 2024 – Aug 2024",
+    certificateLink: "https://github.com/Anupam-Sing-h/Certificates/blob/main/MERN%20certificate.pdf",
+    points: [
+      "Developed full-stack web applications using MongoDB, Express, React, and Node.js",
+      "Implemented RESTful APIs and integrated frontend with backend services",
+      "Learned best practices for modern web development workflows",
+    ],
+    tags: ["MongoDB", "Express", "React", "Node.js", "REST API"],
+  },
+  {
     title: "AI & ML Intern",
     company: "GI Ventures",
     period: "Dec 2023 – May 2024",
@@ -27,18 +39,6 @@ const experiences = [
       "Integrated with Google Gmail API for automated alerts",
     ],
     tags: ["YOLOv7", "PyTorch", "Docker", "Roboflow", "NVIDIA DGX"],
-  },
-  {
-    title: "Summer Internship in MERN Stack",
-    company: "ABESIT",
-    period: "July 2024 – Aug 2024",
-    certificateLink: "https://github.com/Anupam-Sing-h/Certificates/blob/main/MERN%20certificate.pdf",
-    points: [
-      "Developed full-stack web applications using MongoDB, Express, React, and Node.js",
-      "Implemented RESTful APIs and integrated frontend with backend services",
-      "Learned best practices for modern web development workflows",
-    ],
-    tags: ["MongoDB", "Express", "React", "Node.js", "REST API"],
   },
 ];
 

@@ -42,6 +42,18 @@ const aiMlProjects = [
       "95% detection accuracy",
     ],
   },
+  {
+    title: "Language Detection using NLP",
+    description:
+      "A scalable blogging Supervised NLP pipeline that classifies text into 17 languages with up to 97% accuracy. Built with Python and classical ML/NLP techniques for fast, interpretable predictions.",
+    tags: ["NLP", "Python", "scikit-learn", "pandas", "numpy", "Text Classification", "Supervised Learning", "Model Evaluation"],
+    features: [
+      "97% accuracy across 17 languages on curated dataset",
+      "Deterministic, explainable features with minimal dependencies",
+      "CLI-ready script for quick experimentation and batch inference",
+    ],
+    github: "https://github.com/Anupam-Sing-h/QuickBlog",
+  },
 ];
 
 interface Project {
@@ -162,7 +174,8 @@ const ProjectsSection = () => {
                 AI & Machine Learning
               </h3>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"> */}
+              <div className="grid md:grid-cols-2 gap-6">
               {aiMlProjects.map((project, index) => (
                 <ProjectCard key={index} project={project} />
               ))}
