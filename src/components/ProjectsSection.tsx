@@ -28,6 +28,19 @@ const webProjects = [
     github: "https://github.com/Anupam-Sing-h/QuickBlog",
     live: "https://quick-blog-seven-beta.vercel.app",
   },
+  {
+    title: "Bus Ticket Booking Platform",
+    description:
+      "A full‑stack MERN application for booking bus tickets online.This project demonstrates secure backend flows, MongoDB Atlas integration, and a React + Vite frontend deployed on Vercel with the backend running on Render.",
+    tags: ["MERN", "Atlas Integration", "Render", "Vercel"],
+    features: [
+      "Admin dashboard for managing buses",
+      "User Authentication for passengers",
+      "Real-time seat decrement and ticket generation",
+    ],
+    github: "https://github.com/Anupam-Sing-h/Bus-Ticket-Booking-Platform",
+    live: "https://bus-ticket-booking-platform.vercel.app/",
+  },
 ];
 
 const aiMlProjects = [
