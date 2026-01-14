@@ -1,33 +1,39 @@
-# Welcome to your Lovable project
+# Welcome to My Portfolio
 
-## Project info
+## About
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+It's a modern, responsive personal portfolio website showcasing my projects, skills, and professional journey. Built with Next.js, React, and Tailwind CSS, ShadCN UI, with the help of Lovable, it showcases my expertise as a Full-Stack Web Developer and provides recruiters with a clear view of my technical capabilities.
 
-## How can I edit this code?
+**🚀 Featurese**
 
-There are several ways of editing your application.
+Responsive design for desktop, tablet, and mobile
 
-**Use Lovable**
+Project showcase (GoCart, QuickBlog, AI‑powered apps)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Interactive UI with smooth navigation
 
-Changes made via Lovable will be committed automatically to this repo.
+Deployment ready on Vercel with CI/CD workflows
 
-**Use your preferred IDE**
+## 🛠️ Tech Stack
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+This my-portfolio website is built with:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
+
+**⚡ Getting StartedE**
 
 Follow these steps:
 
 ```sh
 # Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+git clone https://github.com/Anupam-Sing-h/my-portfolio.git
 
 # Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+cd my-portfolio
 
 # Step 3: Install the necessary dependencies.
 npm i
@@ -36,38 +42,19 @@ npm i
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+**📂 Project Structure**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+my-portfolio/
+│── public/          # Static assets (images, icons, logos)
+│── src/             # Core source code
+│   ├── components/  # Reusable UI components
+│   ├── pages/       # Next.js pages
+│   ├── styles/      # Global styles
+│   └── utils/       # Helper functions
+│── README.md        # Project documentation
+│── package.json     # Dependencies and scripts
 
-**Use GitHub Codespaces**
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Project info
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+**URL**: https://my-portfolio-dusky-eight-52.vercel.app/
