@@ -57,4 +57,4 @@ my-portfolio/
 
 ## Project info
 
-**URL**: https://my-portfolio-dusky-eight-52.vercel.app/
+**URL**: https://my-portfolio-black-five-61.vercel.app/
